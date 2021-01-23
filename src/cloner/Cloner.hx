@@ -33,6 +33,10 @@ class Cloner {
     }
 
     public function _clone <T> (v:T):T {
+        // see https://github.com/thomasuster/cloner/issues/5
+        if (v == null) {
+            return null;
+        }
         #if js
         if(Std.is(v, String))
             return v;
