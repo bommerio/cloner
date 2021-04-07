@@ -42,7 +42,7 @@ class Cloner {
             return v;
         #end
         
-	// NOTE: this fails in c# because of a class cast exception (x cannot be cast as System.Type)
+        // NOTE: this fails in c# because of a class cast exception (x cannot be cast as System.Type)
         #if (neko || cs)
         try {
         if(Type.getClassName(cast v) != null)
